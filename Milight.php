@@ -226,119 +226,100 @@ class Milight
     }
 
     public function rgbwSendOnToGroup($group) {
-      $activeGroupOnCommand = 'rgbwGroup' . $group . 'On';
-      $this->command($activeGroupOnCommand);
+      $this->command('rgbwGroup' . $group . 'On');
     }
 
     public function rgbwSendOffToGroup($group) {
-      $activeGroupOffCommand = 'rgbwGroup' . $group . 'Off';
-      $this->command($activeGroupOffCommand);
+      $this->command('rgbwGroup' . $group . 'Off');
     }
 
     public function rgbwSetGroupToWhite($group) {
-      $activeCommand = 'rgbwGroup' . $group . 'SetToWhite';
-      $this->command($activeCommand);
+      $this->command('rgbwGroup' . $group . 'SetToWhite');
     }
 
     public function rgbwSetGroupToNightMode($group) {
-      $this->rgbwSendOffToGroup($group);
-      $activeCommand = 'rgbwGroup' . $group . 'NightMode';
-      $this->command($activeCommand);
+      $this->command('rgbwGroup' . $group . 'NightMode');
     }
 
     public function whiteSendOnToGroup($group) {
-      $activeGroupOnCommand = 'whiteGroup' . $group . 'On';
-      $this->command($activeGroupOnCommand);
+      $this->command('whiteGroup' . $group . 'On');
     }
-    
+
     public function whiteSendOffToGroup($group) {
-      $activeGroupOffCommand = 'whiteGroup' . $group . 'Off';
-      $this->command($activeGroupOffCommand);
+      $this->command('whiteGroup' . $group . 'Off');
     }
 
     public function whiteSetGroupToNightMode($group) {
-      $activeCommand = 'whiteGroup' . $group . 'NightMode';
-      $this->command($activeCommand);
+      $this->command('whiteGroup' . $group . 'NightMode');
     }
 
     public function whiteSendOnToActiveGroup() {
       $this->whiteSendOnToGroup($this->getWhiteActiveGroup());
     }
 
-    public function rgbwAllOn()
-    {
+    public function rgbwAllOn() {
         $this->command('rgbwAllOn');
     }
 
-    public function rgbwAllOff()
-    {
+    public function rgbwAllOff() {
         $this->command('rgbwAllOff');
     }
 
-    public function rgbwGroup1On()
-    {
+    public function rgbwGroup1On() {
         $this->command('rgbwGroup1On');
     }
 
-    public function rgbwGroup2On()
-    {
+    public function rgbwGroup2On() {
         $this->command('rgbwGroup2On');
     }
 
-    public function rgbwGroup3On()
-    {
+    public function rgbwGroup3On() {
         $this->command('rgbwGroup3On');
     }
 
-    public function rgbwGroup4On()
-    {
+    public function rgbwGroup4On() {
         $this->command('rgbwGroup4On');
     }
 
-    public function rgbwGroup1Off()
-    {
+    public function rgbwGroup1Off() {
         $this->command('rgbwGroup1Off');
     }
 
-    public function rgbwGroup2Off()
-    {
+    public function rgbwGroup2Off() {
         $this->command('rgbwGroup2Off');
     }
 
-    public function rgbwGroup3Off()
-    {
+    public function rgbwGroup3Off() {
         $this->command('rgbwGroup3Off');
     }
 
-    public function rgbwGroup4Off()
-    {
+    public function rgbwGroup4Off() {
         $this->command('rgbwGroup4Off');
     }
-    
-    public function rgbwAllNightMode()
-    {
+
+    public function rgbwAllNightMode() {
         $this->rgbwAlloff();
         $this->command('rgbwAllNightMode');
     }
-    
+
     public function rgbwGroup1NightMode()
     {
         $this->rgbwGroup1off();
         $this->command('rgbwGroup1NightMode');
     }
-    
+
     public function rgbwGroup2NightMode()
     {
         $this->rgbwGroup2off();
         $this->command('rgbwGroup2NightMode');
     }
-    
+
     public function rgbwGroup3NightMode()
     {
         $this->rgbwGroup3off();
         $this->command('rgbwGroup3NightMode');
     }
-    
+
     public function rgbwGroup4NightMode()
     {
         $this->rgbwGroup4off();
